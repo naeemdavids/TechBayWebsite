@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link for bootstrap 5 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="css/techbayCSS.css" rel="stylesheet" type="text/css">
+
+    <!--Link for bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!--Link for Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script async src="js/itemData.js"></script>
+    
+    <script async src="js/techbay.js"></script>
+    
+    <title>Tech Bay Home Page</title>
+
+</head>
+<body>
+    <!--The following markup is for the Navbar, it uses css and Jquery to work as a proper drop-down menu.Also has the markup for the cart icon and a search bar that is currently inactive.-->
+    <nav class="navbar p-0 bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <ul class="main navbar">
+                <li>
+                    <a href="" class="btn btn-outline-light">Menu</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="./Tech%20Bay%20Homepage.html" class="btn-outline-light">Home</a>
+                        </li>
+                            
+                        <li>
+                            <a href="./src/Shipping.html" class="btn-outline-light">Shipping</a>
+                        </li>
+                            
+                        <li>
+                            <a href="./src/About%20Us.html" class="btn-outline-light">About Us</a>
+                        </li>
+                            
+                        <li>
+                            <a href="./src/Products.html" class="btn-outline-light">Products</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+                    
+            <div class="d-flex">
+                <form class="d-flex">
+                        <input type="search" class="form-control mx-1" placeholder="Search">
+                        <button class="btn btn-outline-light p-1">Search</button>
+                </form>
+        
+                <a href="./src/cart.html">
+                    <div class="cart d-flex btn btn-outline-light py-1 mx-1 px-3">
+                        <i class="bi bi-cart4"></i>
+                        <div class="cartAmount" id="cartAmountIcon">0</div>
+                    </div> 
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--This div is just there to make a bit of padding between the navbar and header, so that it does not overlap-->
+    <div class="mt-2"></div>
+    
+
+    <!--The header section-->
+    <header class="globalHeader pt-5">
+        <h1 class="text-center text-white bg-dark mb-0 logo">TECH BAY</h1>
+        <h6 class="text-center text-white bg-dark mb-0">The Home Of Trusted Electronics Ready For You!</h6>
+    </header>
+
+    
+    <!--Mark up for the animation block on the upper side of the home page-->
+    <div class="d-flex">
+        <div id="content-before" class="container bg-dark text-white text-center">
+            <h2 id="content-before-inner">TECH BAY!</h2>
+        </div>
+    
+        <div id="content-after" class="container bg-light text-dark text-center">
+            <h2 id="content-after-inner">TECH BAY!</h2>
+        </div>
+    </div>
+    
+
+    
+    <!--The Opening Statement-->
+    <div class="container box mt-3 bg-dark text-white border border-1 rounded">
+        <h3 id="openingStatement">Tech Bay is the Number One supplier of electronics in the country.
+            Here at Tech Bay we strive to deliver only the best products to our valued customers.
+        </h3>
+    </div>
+
+    
+    <!--The shop items catalogue comes here, javascript is used to generate the items instead rather then hard coding it every time.-->
+    <div class="container bg-dark border border-1 rounded p-2 mb-2 mt-2">
+        <h3 class="text-white text-center">Catalogue for our Latest Products!</h3>
+        <div class="latestProducts bg-light m-2" id="latestProducts"></div>
+    </div>
+
+
+    
+    <!--The following mark up is for the Sign Up form for a discount coupon-->
+    <form class="container text-white bg-dark border border-1 rounded">
+        <h2 class="text-center">Discount Coupon!</h2>
+        <h5 id="signUp" class="text-center bg-dark p-2">Sign up for our group membership to get a Discount Coupon <span class="text-danger">(every month)</span> worth 10% off for your purchase! <span class="text-danger">(includes the whole cart)</span>.</h5>
+
+        <fieldset>
+            <div class="row mb-3 text-center bg-dark">
+                <label for="emailAddress" class="col-sm-2 col-form-label">Email Address:</label>
+
+                <div class="col-sm-7">
+                    <input type="email" class="form-control" placeholder="Email Address" id="emailAddress" required>
+                </div>
+            </div>
+
+            <div class="row mb-3 text-center">
+                <label for="yourName" class="col-sm-2 col-form-label">Name:</label>
+
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" placeholder="Name" id="yourName" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-dark btn-outline-light mb-1 mx-4 p-2" id="submitCouponDetails"  onclick="return submitCouponBlankCheck()">Submit My Details</button>
+        </fieldset>
+    </form>
+
+    <div class="container text-white bg-dark border border-1 rounded mt-1 text-center p-2">
+        <button type="submit" class="btn btn-dark btn-outline-light mb-1 mx-4 p-2 px-2" onclick="getDiscountCoupon()">Get My Coupon</button>
+    </div>
+    
+    
+
+    <!--Mark up for the testamonial section of the home page-->
+    <div class="container row row-cols-1 row-cols-md-3 g-4 mt-1 mx-auto">
+        <div class="col">
+            <div class="card h-100 testamonial">
+                <div class="card-body">
+                    <p class="card-text">"I can always trust in Tech Bay to deliver only the best quality of products for my company."</p>
+                    <h6 class="card-text">-Micheal Kruger from Paragon Banking</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 testamonial">
+                <div class="card-body">
+                    <p class="card-text">"I always feel safe shoping at Tech Bay, because I know the things I buy online are not a scam!"</p>
+                    <h6 class="card-text">-Benson from your Average Day Household</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 testamonial">
+                <div class="card-body">
+                    <p class="card-text">"I find Tech Bay amazing as they conviently deliver the goods I want albeit not living in South Africa."</p>
+                    <h6 class="card-text">-From Random man who Hates leaving his apartment</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-white bg-dark p-2 mt-3">
+        Tech Bay Company &copy; 2022. All Rights Reserved
+    </footer>
+
+    <!--Link for bootstrap 5 JS Plugins-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

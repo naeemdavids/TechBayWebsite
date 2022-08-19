@@ -1,0 +1,167 @@
+/*The code below applies to all pages on the Tech Bay Website*/
+
+body{
+    background-image: url(../images/background-wallpaper-Color-0.jpg);
+}
+
+.logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.cart{
+    position: relative;
+    font-size: 23px;
+}
+
+/*The CSS Style below is for the dropdown menu in the navbar section*/
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+
+nav li a{
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #212529;
+}
+
+nav ul.sub{
+    position: absolute;
+    display: none;
+}
+
+/*Style for the cart icon in the top right corner*/
+#cartAmountIcon{
+    position: absolute;
+    top: -6px;;
+    right: -5px;
+    font-size: 16px;
+    background-color: red;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/*The style below @media makes the webpage much more responsive for the webpages header.*/
+@media (max-width: 700px) {
+    .globalHeader{
+        margin-top: 55px;
+    }
+}
+
+
+/*Style for the cart when there are no items in*/
+.emptySpace{
+    margin-bottom: 10px;
+}
+
+.bi-x-lg{
+    font-weight: bold;
+}
+
+/*The following Style below is for the cart when there are items in*/
+
+/*Style for the item cards inside the cart.*/
+.fullCart{
+    display: grid;
+    grid-template-columns: repeat(1, 380px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.cartItem{
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.xBox{
+    margin-left: 177px;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: red;
+    cursor: pointer;
+}
+
+.details{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nameAndPrice{
+    font-size: 17px;
+    gap: 10px;
+}
+
+.cartPrice{
+    color: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.priceButtons{
+    gap: 8px;
+    font-size: 20px;
+}
+
+.plusMinusButtons{
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.itemsQuantity{
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+}
+
+/*Style for the discount and delivery section on the cart page when ther are items inside it.*/
+.discountCoupon{
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.deliveryDetails{
+    border-radius: 5px;
+    color: white;
+    background-color: green;
+}
+
+.deliveryMethod{
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.deliveryMethodBlock{
+    display: none;
+}
+
+
+/*Style for checkout and clearcart button on the cart page.*/
+.checkout{
+    border-radius: 5px;
+    color: black;
+    background-color: green;
+}
+
+.clearCart{
+    border-radius: 5px;
+    color: black;
+    background-color: red;
+}

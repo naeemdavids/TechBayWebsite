@@ -1,0 +1,223 @@
+/*The code below applies to all pages on the Tech Bay Website*/
+
+body{
+    background-image: url(../images/background-wallpaper-Color-0.jpg);
+}
+
+.logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.cart{
+    position: relative;
+    font-size: 23px;
+}
+
+/*The CSS Style below is for the dropdown menu in the navbar section*/
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+
+nav li a{
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #212529;
+}
+
+nav ul.sub{
+    position: absolute;
+    display: none;
+}
+
+/*Style for the cart icon in the top right corner*/
+#cartAmountIcon{
+    position: absolute;
+    top: -6px;;
+    right: -5px;
+    font-size: 16px;
+    background-color: red;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/*The style below @media makes the webpage much more responsive for the webpages header.*/
+@media (max-width: 700px) {
+    .globalHeader{
+        margin-top: 8px;
+    }
+}
+
+.newTag{
+    color: red;
+    
+}
+
+
+/*The following code is for the homepage opening Statement*/
+h6{
+    font-style: italic;
+}
+
+#openingStatement{
+    color: darkturquoise;
+}
+
+
+/*Style for the animation block of the home page under the header, uses jquery to animate this process.*/
+#content-before{
+    margin-top: 10px;
+    width: 700px;
+    height: 100px;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+#content-before-inner{
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    #content-before{
+        margin-top: 15px;
+        width: 480px;
+    }
+    
+}
+
+/*Style for the animation block of the home page under the header, uses jquery to animate this process.*/
+#content-after{
+    margin-top: 10px;
+    width: 1px;
+    height: 100px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+#content-after-inner{
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    #content-after{
+        margin-top: 15px;
+        width: 480px;
+    }
+    #content-after-inner{
+        margin-top: 0px;
+    }
+}
+
+
+/*Style for the rest of the the latest catalogue if items*/
+
+
+.box{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+/*Catalogue for the latest Items start their code here*/
+.latestProducts{
+    display: grid;
+    grid-template-columns: repeat(4,240px);
+    gap: 30px;
+    justify-content: center;
+}
+
+/*The code below @media makes the webpage much more responsive when the user makes the page webpage smaller*/
+@media (max-width: 1200px) {
+    .latestProducts{
+        grid-template-columns: repeat(3,240px);
+    }
+}
+
+
+@media (max-width: 990px) {
+    .latestProducts{
+        grid-template-columns: repeat(2,240px);
+    }
+}
+
+@media (max-width: 780px) {
+    .latestProducts{
+        grid-template-columns: repeat(1,240px);
+    }
+}
+
+
+/*The style below is used to style the item boxes/cards in the latest items catalogue section of the homepage.*/
+.itemsHome{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    border: 2px solid rgb(37, 35, 35);
+    border-radius: 4px;
+
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+
+.itemsHover{
+    display: none;
+}
+
+.price{
+    justify-content: space-between;
+}
+
+.readMore{
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    padding-left: 1px;
+    padding-right: 1px;
+    display: none;
+}
+
+
+.priceButtons{
+    gap: 8px;
+    font-size: 20px;
+}
+
+.plusMinusButtons{
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/*The style below is for the getting a discount coupon section and the testamonials below that.*/
+#signUp{
+    color: burlywood;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.testamonial{
+    background-color: burlywood;
+}

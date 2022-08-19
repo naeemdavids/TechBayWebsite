@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Link for bootstrap 5 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Link for bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!--Link for Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="../css/shipping.css" rel="stylesheet" type="text/css">
+
+    <script async src="../js/shipping.js"></script>
+    
+    <title>Shipping</title>
+</head>
+<body>
+    <!--The following markup is for the Navbar, it uses css and Jquery to work as a proper drop-down menu.Also has the markup for the cart icon and a search bar that is currently inactive.-->
+    <nav class="navbar p-0 bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <ul class="main navbar">
+                <li>
+                    <a href="" class="btn btn-outline-light">Menu</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="../Tech%20Bay%20Homepage.html" class="btn-outline-light">Home</a>
+                        </li>
+                            
+                        <li>
+                            <a href="../src/Shipping.html" class="btn-outline-light">Shipping</a>
+                        </li>
+                            
+                        <li>
+                            <a href="../src/About%20Us.html" class="btn-outline-light">About Us</a>
+                        </li>
+                            
+                        <li>
+                            <a href="../src/Products.html" class="btn-outline-light">Products</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+                    
+            <div class="d-flex">
+                <form class="d-flex">
+                        <input type="search" class="form-control mx-1" placeholder="Search">
+                        <button class="btn btn-outline-light p-1">Search</button>
+                </form>
+        
+                <a href="../src/cart.html">
+                    <div class="cart d-flex btn btn-outline-light py-1 mx-1 px-3">
+                        <i class="bi bi-cart4"></i>
+                        <div class="cartAmount" id="cartAmountIcon">0</div>
+                    </div> 
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!--This div is just there to make a bit of padding between the navbar and header, so that it does not overlap-->
+    <div class="mt-2"></div>
+
+    <!--The header section-->
+    
+    <header class="pt-5">
+        <h1 class="text-center text-white bg-dark mb-0 logo">TECH BAY</h1>
+        <h6 class="text-center text-white bg-dark mb-0">The Home Of Trusted Electronics Ready For You!</h6>
+    </header>
+
+    <!--Shipping-->
+
+    <section class="container bg-dark mt-3 pb-1 rounded">
+        <h2 class="container text-white text-center">Tech Bay Shipping</h2>
+
+        <div class="container bg-light text-center">
+            <p>Here at Tech Bay we are prepared to go the extra mile for our valued customers by delivering our products straight to your doorstep.With our online store you can instantly purchase any product online, add the items to your cart and ship all of them in one go straight to you.</p>
+
+            <p>We are also prepared to go even further by delivering our products overseas to those outside of the country! We've partnered with various other companies abroad to ensure that the package you orderd is deliverd straight to your doorstep regardless of were ever you are in the world.</p>
+        </div>
+    </section>
+
+    <!--The code below is for the external links to other sites. I've but them in a form style to make it look nice.-->
+    
+    <section class="container bg-dark text-center mt-3 pb-2">
+        <h2 class="text-white">Our Shipping Partners</h2>
+
+        <div class="container bg-light">
+            <h6>We have partnered with various shipping companies around the world to make sure that where ever you are, your pakage will be dilvered!<br>If you wish to know more about them, please feel free to visit the links below.</h6>
+        
+            <div class="container bg-light m-2 p-2">
+                <form style="display: inline" action="https://www.maersk.com/" target="_blank" method="get">
+                    <button class="btn btn-outline-dark p-2 mx-1">Maersk</button>
+                </form>
+                    
+                <form style="display: inline" action="https://www.msc.com/" target="_blank" method="get">
+                    <button class="btn btn-outline-dark p-2 mx-1">Mediterranean Shipping Company</button>
+                </form>
+                    
+                <form style="display: inline" action="https://www.hapag-lloyd.com/en/home.html" target="_blank" method="get">
+                    <button class="btn btn-outline-dark p-2 mx-1">Hapag-Lloyd</button>
+                </form>
+                    
+                <form style="display: inline" action="https://www.evergreen-marine.com/" target="_blank" method="get">
+                    <button class="btn btn-outline-dark p-2 mx-1">Evergreen-Marine Corporation</button>
+                </form>
+            </div>       
+        </div>
+    </section>
+
+    <!--The following code is for the Radio Forms Regarding the users shipping details for Local Delivery -->
+    
+    <div class="container bg-dark mt-3 mb-2 pb-2 rounded">
+        <h2 class="text-center text-white">Manage Your Shipping for <span class="shipInSa">Local Delivery (In South Africa)</span></h2>
+        
+        <div class="container bg-light">
+            <h4 class="text-center">Please fill in the form below and then confirm by clicking "Save My Details".</h4>
+
+            <br>
+
+            <div class="container text-center">
+                <h6>Your Method of Payment:</h6>
+
+                <div class="row">
+                    <div class="span12 pagination-centered">               
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPayLocal" id="radioBox3Local" checked>
+                            <label class="form-check-label" for="radioBox3Local">
+                            Visa Card
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPayLocal" id="radioBox4Local">
+                            <label class="form-check-label" for="radioBox4Local">
+                            Master Card
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container text-center">
+                <h6>Your Method of Contact During Pakage Deliverence:</h6>
+
+                <div class="row">
+                    <div class="span12 pagination-centered">              
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxContactLocal" id="radioBox5Local" checked>
+                            <label class="form-check-label" for="radioBox5Local">
+                            Via SMS
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxContactLocal" id="radioBox6Local">
+                            <label class="form-check-label" for="radioBox6Local">
+                            Via Email
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container text-center">
+                <h6>Place to Deliver your Pakage:</h6>
+
+                <div class="row">
+                    <div class="span12 pagination-centered">               
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPlaceLocal" id="radioBox7Local" checked>
+                            <label class="form-check-label" for="radioBox7Local">
+                            To your House
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPlaceLocal" id="radioBox8Local">
+                            <label class="form-check-label" for="radioBox8Local">
+                            To Post Mail Station
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container text-center">
+                <button class="btn btn-primary p-2 mb-3" onclick="shipDetailsSavedLocal()">Save My Details</button>
+            </div>
+            
+            <h5 class="text-center text-danger fst-italic">Thank you for purchasing at Tech Bay!</h5>
+
+            <br>
+        </div>
+    </div>
+
+    <!--The following code is for the Radio Forms Regarding the users shipping details for International Delivery--> 
+
+    <div class="container bg-dark mt-3 mb-2 pb-2 rounded">
+        <h2 class="text-center text-white">Manage Your Shipping for <span class="shipOutSa">International Delivery (Overseas)</span></h2>
+
+        <div class="container bg-light">
+            <h4 class="text-center">Please fill in the form below and then confirm by clicking "Save My Details".</h4>
+
+            <br>
+
+            <div class="container text-center">
+                <h6>Your Method of Payment:</h6>
+
+                <div class="row">
+                    <div class="span12 pagination-centered">               
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPayInternational" id="radioBox3International" checked>
+                            <label class="form-check-label" for="radioBox3International">
+                            Visa Card
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPayInternational" id="radioBox4International">
+                            <label class="form-check-label" for="radioBox4International">
+                            Master Card
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container text-center">
+                <h6>Your Method of Contact During Pakage Deliverence:</h6>
+
+                <div class="row">
+                    <div class="span12 pagination-centered">              
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxContactInternational" id="radioBox5International" checked>
+                            <label class="form-check-label" for="radioBox5International">
+                            Via SMS
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxContactInternational" id="radioBox6International">
+                            <label class="form-check-label" for="radioBox6International">
+                            Via Email
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container text-center">
+                <h6>Place to Deliver your Pakage:</h6>
+
+                <div class="row">
+                    <div class="span12 pagination-centered">               
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPlaceInternational" id="radioBox7International" checked>
+                            <label class="form-check-label" for="radioBox7International">
+                            To your House
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioBoxPlaceInternational" id="radioBox8International">
+                            <label class="form-check-label" for="radioBox8International">
+                            To Post Mail Station
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="container text-center">
+                <button class="btn btn-primary p-2 mb-3" onclick="shipDetailsSavedInternational()">Save My Details</button>
+            </div>
+            
+            <h5 class="text-center text-danger fst-italic">Thank you for purchasing at Tech Bay!</h5>
+
+            <br>
+        </div>
+    </div>
+
+    <footer class="text-center text-white bg-dark p-2 mt-3">
+        Tech Bay Company &copy; 2022. All Rights Reserved
+    </footer>
+
+    <!--Link for bootstrap 5 JS Plugins-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

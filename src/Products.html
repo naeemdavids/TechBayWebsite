@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link for bootstrap 5 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Link for bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!--Link for Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="../css/products.css">
+
+    <script async src="../js/itemData.js"></script>
+
+    <script async src="../js/products.js"></script>
+
+    <title>Products</title>
+</head>
+<body>
+    <!--The following markup is for the Navbar, it uses css and Jquery to work as a proper drop-down menu.Also has the markup for the cart icon and a search bar that is currently inactive.-->
+    <nav class="navbar p-0 bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <ul class="main navbar">
+                <li>
+                    <a href="" class="btn btn-outline-light">Menu</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="../Tech%20Bay%20Homepage.html" class="btn-outline-light">Home</a>
+                        </li>
+                            
+                        <li>
+                            <a href="../src/Shipping.html" class="btn-outline-light">Shipping</a>
+                        </li>
+                            
+                        <li>
+                            <a href="../src/About%20Us.html" class="btn-outline-light">About Us</a>
+                        </li>
+                            
+                        <li>
+                            <a href="../src/Products.html" class="btn-outline-light">Products</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+                    
+            <div class="d-flex">
+                <form class="d-flex">
+                        <input type="search" class="form-control mx-1" placeholder="Search">
+                        <button class="btn btn-outline-light p-1">Search</button>
+                </form>
+        
+                <a href="../src/cart.html">
+                    <div class="cart d-flex btn btn-outline-light py-1 mx-1 px-3">
+                        <i class="bi bi-cart4"></i>
+                        <div class="cartAmount" id="cartAmountIcon">0</div>
+                    </div> 
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--This div is just there to make a bit of padding between the navbar and header, so that it does not overlap-->
+    <div class="mt-2"></div>
+    
+
+    <!--The header section-->
+    <header class="globalHeader pt-5">
+        <h1 class="text-center text-white bg-dark mb-0 logo">TECH BAY</h1>
+        <h6 class="text-center text-white bg-dark mb-0">The Home Of Trusted Electronics Ready For You!</h6>
+    </header>
+
+    <!--The Opening Statement-->
+    <div class="container box mt-3 bg-dark text-white border border-1 rounded">
+        <h3 id="openingStatement">Tech Bay is the Number One supplier of electronics in the country.
+            Here at Tech Bay we strive to deliver only the best products to our valued customers.
+        </h3>
+    </div>
+
+    
+    <!--The shop items catalogue comes here, javascript is used to generate the items instead rather then hard coding it every time.-->
+    <div class="container bg-dark border border-1 rounded p-2 mb-2 mt-2">
+        <h3 class="text-white text-center">Catalogue for our Products!</h3>
+        <div class="shopProducts bg-light m-2" id="shopProducts"></div>
+    </div>
+    
+    <footer class="text-center text-white bg-dark p-2 mt-3">
+        Tech Bay Company &copy; 2022. All Rights Reserved
+    </footer>
+
+    <!--Link for bootstrap 5 JS Plugins-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
