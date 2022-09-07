@@ -23,7 +23,7 @@ let createShopProducts = () => {
         return `
         <h2 class="text-center">${name}</h2>
         <div class="d-flex">
-            <img src="${imgPage}" alt="" width="450px">
+            <img src="${imgPage}" alt="" width="2000px">
             <div class="itemDetails text-center m-2">
                 <h3>${name}</h3>
             
